@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{html5shiv, imask, jquery, jquery-1.12.4, jquery-3.3.1.slim, jquery-validation, jquery.inputmask, jquery.mask, materialize, respond, sweetalert2}" />
+  </component>
+</project>

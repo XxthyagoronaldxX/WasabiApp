@@ -1,0 +1,66 @@
+.item-pedido {
+    width: 100%;
+
+    display: block;
+    padding: 2rem 0.6rem;
+    position: relative;
+    overflow-y: hidden;
+
+    box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+#item-content {
+    width: 100%;
+}
+
+.item-pedido:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    color: black;
+}
+
+.item-pedido-content {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-container-color {
+    position: absolute;
+
+    height: 100%;
+    width: 4px;
+
+    background-color: #198754;
+
+    left: 0;
+    bottom: 0;
+}
+
+.item-pedido-leading {
+    display: flex;
+
+    align-items: center;
+}
+
+.item-pedido-total {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.item-pedido-created-at {
+    color: gray;
+    font-weight: bold;
+    font-size: 1.8rem;
+}

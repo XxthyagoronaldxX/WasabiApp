@@ -1,0 +1,327 @@
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #CE1414;
+
+    border: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100VW;
+    overflow: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.cart-frame {
+    height: 100%;
+    width: 65%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    align-items: stretch;
+
+    overflow: hidden;
+    background-color: #EDE6E3;
+}
+
+#logo_content {
+    width: 100%;
+    height: 12rem;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(182,0,0,1) 22%, rgba(133,0,0,1) 100%);
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
+
+#logo_content h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#logo_content img {
+    width: 6rem;
+    height: 6rem;
+}
+
+#cart-button-leave {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 5rem;
+    height: 4rem;
+
+    border-bottom-right-radius: 1rem;
+
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.5s ease-out;
+}
+
+#cart-button-leave:hover {
+    transform: translateX(-4.2px);
+}
+
+#cart-button-leave img {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-content {
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../../../imgs/bg_login_page.jpg");
+    background-size: cover;
+    filter: blur(2px);
+
+    position: absolute;
+    z-index: -1;
+}
+
+.sem-produtos {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sem-produtos h4 {
+    font-size: 4rem;
+}
+
+#cart-produtos-selected {
+    flex: 1;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+
+    overflow-y: auto;
+}
+
+#cart-produtos-selected h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pedido-content {
+    width: 100%;
+    height: 16rem;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.info-pedido {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-pedido-start {
+    width: 60%;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.info-pedido-start .info-nome {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.info-pedido-start #cart-info-frete {
+    display: flex;
+
+    margin-top: 0.5rem;
+}
+
+.info-pedido-start  #cart-info-frete label {
+    font-weight: bold;
+    font-size: 1.6rem;
+
+    margin-left: 0.4rem;
+}
+
+.info-pedido-start .info-endereco, .info-pedido-start .info-cartao {
+    color: #565e64;
+    font-size: 1.4rem;
+}
+
+.info-pedido-divider {
+    height: 100%;
+    width: 0.4rem;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10rem;
+}
+
+.info-pedido-end {
+    width: 30%;
+    height: 100%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conta-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conta-content .conta-item {
+    display: flex;
+
+    font-weight: bold;
+
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.conta-content .conta-item:last-child {
+    border-top: #565e64 1px solid;
+    font-size: 1.6rem;
+}
+
+.buttons a:first-child {
+    font-weight: bold;
+
+    color: #fd7e14;
+
+    transition: background-color 1s;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
+}
+
+.buttons a {
+    height: 3.5rem;
+    width: 100%;
+    font-size: 1.7rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons a:first-child {
+    font-size: 1.2rem;
+}
+
+.buttons a:first-child:hover {
+    background-color: rgba(223, 123, 122, 0.4);
+}
+
+@media (max-width: 1200px) {
+    .cart-frame {
+        width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .cart-frame {
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px) {
+    html {
+        font-size: 40%;
+    }
+    .pedido-content {
+        height: 24rem;
+    }
+    .info-pedido-start .info-nome {
+        font-size: 2.6rem;
+    }
+    .info-pedido-start  #cart-info-frete label {
+        font-size: 2.4rem;
+    }
+    .info-pedido-start .info-endereco, .info-pedido-start .info-cartao {
+        font-size: 2.2rem;
+    }
+    .conta-content .conta-item {
+        font-size: 2.2rem;
+    }
+    .conta-content .conta-item:last-child {
+        font-size: 2.4rem;
+    }
+    .buttons a {
+        height: 5rem;
+        font-size: 2.4rem;
+    }
+    .buttons a:first-child {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 35%;
+    }
+    #logo_content h3 {
+        color: white;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+    #logo_content img {
+        width: 8rem;
+        height: 8rem;
+    }
+    .conta-content .conta-item {
+        font-size: 1.8rem;
+    }
+}

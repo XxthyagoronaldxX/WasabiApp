@@ -1,0 +1,219 @@
+.btn {
+    border-radius: 0;
+}
+
+.card-conteiner {
+    width: 29rem;
+    height: 26rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    opacity: 1;
+
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.price-product {
+    width: 6rem;
+    height: 3.5rem;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1.35rem;
+    padding: 0.1rem;
+    background-color: #4A5899;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    right: -1.4rem;
+    top: -1.4rem;
+}
+
+.card-img-content {
+    width: 100%;
+    height: 30%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    border-bottom-left-radius: 1rem;
+    overflow: hidden;
+    background-color: #EDE6E3;
+}
+
+.card-img-content img {
+    width: 7.2rem;
+    height: 7.2rem;
+}
+
+.card-conteiner .card-description-content {
+    display: flex;
+    width: 100%;
+    height: 54%;
+    padding: 0.6rem;
+
+    flex-direction: column;
+
+    overflow: hidden;
+    justify-content: start;
+    align-items: start;
+}
+
+.card-conteiner .card-description-content h5 {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.card-conteiner .card-description-content h6 {
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.65rem;
+
+    word-break: break-all;
+}
+
+.card-quantidade-adicionado {
+    position: absolute;
+    background-color: #AA4465;
+    color: white;
+    font-weight: bold;
+
+    padding: 0.2rem 1rem;
+    left: -1rem;
+    top: -1.4rem;
+}
+
+.buttons-remove-adicionado-produto {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.remover-badge {
+    width: 25%;
+    height: 100%;
+    margin-bottom: 0;
+
+    background-color: #C33C54;
+
+    transition: all 0.5s ease-out;
+}
+
+.remover-badge:hover {
+    width: 103%;
+    height: 103%;
+
+    box-shadow: 2px 2px 7px 0 rgba(0,0,0,0.4);
+}
+
+.remover-badge img {
+    height: 100%;
+    width: 100%;
+    max-width: 2.6rem;
+    max-height: 2.6rem;
+}
+
+.adicionar-badge {
+    width: 100%;
+    height: 4rem;
+    background-color: #CE1414;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 1rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    transition: all 0.5s ease-out;
+}
+
+.adicionar-badge:hover {
+    width: 103%;
+    height: 4.3rem;
+
+    color: #D4E4BC;
+    box-shadow: 2px 2px 7px 0 rgba(0,0,0,0.4);
+}
+
+.adicionado-badge {
+    width: 75%;
+    height: 100%;
+    background-color: #32936F;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 1rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    transition: all 0.5s ease-out;
+}
+
+.adicionado-badge:hover {
+    width: 103%;
+    height: 103%;
+
+    color: #D4E4BC;
+    box-shadow: 2px 2px 7px 0 rgba(0,0,0,0.4);
+}
+
+
+@media (max-width: 540px) {
+    .card-conteiner {
+        width: 36rem;
+        height: 32rem;
+    }
+
+    .card-conteiner .card-description-content h5 {
+        font-size: 2.4rem;
+    }
+
+    .card-conteiner .card-description-content h6 {
+        font-size: 1.9rem;
+    }
+
+    .adicionar-badge {
+        font-size: 2rem;
+        height: 5rem;
+    }
+
+    .adicionar-badge:hover {
+        height: 5.3rem;
+    }
+}

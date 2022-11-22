@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+    <welcome-file-list>
+        <welcome-file>ApplicationController</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/pages/error/404/index.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/pages/error/500/index.jsp</location>
+    </error-page>
+
+    <!-- SERVLET - GENERAL -->
+    <servlet>
+        <display-name>ApplicationController</display-name>
+        <servlet-name>ApplicationController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.ApplicationController</servlet-class>
+    </servlet>
+
+    <!-- SERVLET - CLIENTE -->
+    <servlet>
+        <display-name>ClienteProdutoController</display-name>
+        <servlet-name>ClienteProdutoController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.cliente.ClienteProdutoController</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>ClienteController</display-name>
+        <servlet-name>ClienteController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.cliente.ClienteController</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>SelfClienteController</display-name>
+        <servlet-name>SelfClienteController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.cliente.SelfClienteController</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>ClienteCategoriaController</display-name>
+        <servlet-name>ClienteCategoriaController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.cliente.ClienteCategoriaController</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>ClientePedidoController</display-name>
+        <servlet-name>ClientePedidoController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.cliente.ClientePedidoController</servlet-class>
+    </servlet>
+
+    <!-- SERVLET - ADMIN -->
+    <servlet>
+        <display-name>AdminController</display-name>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.admin.AdminController</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>AdminProdutoController</display-name>
+        <servlet-name>AdminProdutoController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.admin.AdminProdutoController</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>AdminCategoriaController</display-name>
+        <servlet-name>AdminCategoriaController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.admin.AdminCategoriaController</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>AdminPedidoController</display-name>
+        <servlet-name>AdminPedidoController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.admin.AdminPedidoController</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>AdminClienteController</display-name>
+        <servlet-name>AdminClienteController</servlet-name>
+        <servlet-class>com.netbiis.wassabiapp_jsp.controller.servlets.controllers.admin.AdminClienteController</servlet-class>
+    </servlet>
+
+    <!-- SERVLET MAPPING GENERAL -->
+    <servlet-mapping>
+        <servlet-name>ApplicationController</servlet-name>
+        <url-pattern>/ApplicationController</url-pattern>
+    </servlet-mapping>
+
+    <!-- SERVLET MAPPING ADMIN -->
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/AdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminProdutoController</servlet-name>
+        <url-pattern>/AdminProdutoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminCategoriaController</servlet-name>
+        <url-pattern>/AdminCategoriaController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminPedidoController</servlet-name>
+        <url-pattern>/AdminPedidoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminClienteController</servlet-name>
+        <url-pattern>/AdminClienteController</url-pattern>
+    </servlet-mapping>
+
+    <!-- SERVLET MAPPING CLIENTE -->
+    <servlet-mapping>
+        <servlet-name>ClienteProdutoController</servlet-name>
+        <url-pattern>/ClienteProdutoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClienteCategoriaController</servlet-name>
+        <url-pattern>/ClienteCategoriaController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClienteController</servlet-name>
+        <url-pattern>/ClienteController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SelfClienteController</servlet-name>
+        <url-pattern>/SelfClienteController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientePedidoController</servlet-name>
+        <url-pattern>/ClientePedidoController</url-pattern>
+    </servlet-mapping>
+
+    <!-- FILTERS -->
+    <filter>
+        <filter-name>RequestAuthenticationFilter</filter-name>
+        <filter-class>com.netbiis.wassabiapp_jsp.controller.servlets.filters.RequestAuthenticationFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>RequestNoLoggedFilter</filter-name>
+        <filter-class>com.netbiis.wassabiapp_jsp.controller.servlets.filters.RequestNoLoggedFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>RequestAdminAuthenticationFilter</filter-name>
+        <filter-class>com.netbiis.wassabiapp_jsp.controller.servlets.filters.RequestAdminAuthenticationFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>RequestNoLoggedAdminFilter</filter-name>
+        <filter-class>com.netbiis.wassabiapp_jsp.controller.servlets.filters.RequestNoLoggedAdminFilter</filter-class>
+    </filter>
+
+    <!-- FILTERS MAPPING ADMIN -->
+    <filter-mapping>
+        <filter-name>RequestAdminAuthenticationFilter</filter-name>
+        <url-pattern>/pages/admin/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestAdminAuthenticationFilter</filter-name>
+        <url-pattern>/AdminProdutoController</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestAdminAuthenticationFilter</filter-name>
+        <url-pattern>/AdminCategoriaController</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestAdminAuthenticationFilter</filter-name>
+        <url-pattern>/AdminPedidoController</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestAdminAuthenticationFilter</filter-name>
+        <url-pattern>/AdminClienteController</url-pattern>
+    </filter-mapping>
+
+    <!-- FILTERS MAPPING NOLOGIN -->
+    <filter-mapping>
+        <filter-name>RequestNoLoggedFilter</filter-name>
+        <url-pattern>/pages/face/login/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestNoLoggedFilter</filter-name>
+        <url-pattern>/pages/face/register/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestNoLoggedAdminFilter</filter-name>
+        <url-pattern>/pages/face/admin_login/*</url-pattern>
+    </filter-mapping>
+
+    <!-- FILTERS MAPPING CLIENTE -->
+    <filter-mapping>
+        <filter-name>RequestAuthenticationFilter</filter-name>
+        <url-pattern>/pages/cliente/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestAuthenticationFilter</filter-name>
+        <url-pattern>/ClienteProdutoController</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestAuthenticationFilter</filter-name>
+        <url-pattern>/ClienteCategoriaController</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestAuthenticationFilter</filter-name>
+        <url-pattern>/ClientePedidoController</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestAuthenticationFilter</filter-name>
+        <url-pattern>/SelfClienteController</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestNoLoggedFilter</filter-name>
+        <url-pattern>/ClienteController</url-pattern>
+    </filter-mapping>
+</web-app>

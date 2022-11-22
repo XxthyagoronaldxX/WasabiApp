@@ -1,0 +1,137 @@
+.modal-img {
+    width: 150%;
+}
+
+.modal-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content{
+    background: #EDE6E3;
+    height: 40rem;
+    width: 45rem;
+
+    border: none;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.modal-header {
+    background: rgb(2,0,36);
+    background: linear-gradient(30deg, rgba(182,0,0,1) 22%, rgba(133,0,0,1) 100%);
+}
+
+.modal-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.quantidade-contador {
+    display: flex;
+    height: 3.5rem;
+    background-color: white;
+
+    border: rgba(1, 1, 1, 0.2) 1px solid;
+}
+
+.quantidade-contador a {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bolder;
+
+    font-size: 3rem;
+}
+
+.quantidade-contador #modal-quantidade {
+    height: 100%;
+    width: 3rem;
+
+    font-size: 2rem;
+    text-align: center;
+}
+
+.modal-footer {
+    justify-content: space-between;
+}
+
+.btn-primary:first-child {
+    background-color: #4A5899;
+}
+
+.btn-primary:first-child:hover {
+    background-color: #8f79c1;
+}
+
+.btn-primary:last-child {
+    background-color: #198754;
+}
+
+.btn-primary:last-child:hover {
+    background-color: #49A764;
+}
+
+.btn-primary {
+    width: 15rem;
+    height: 4rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    transition: background-color 0.7s;
+}
+
+#modal-nome {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+#modal-preco {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4A5899;
+}
+
+#modal-descricao-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #4A5899;
+}
+
+#modal-descricao {
+    color: #565e64;
+}
+
+#modal-quantidade-produto-span {
+    color: gray;
+}
+
+#modal-image {
+    margin-right: 1rem;
+}
+
+hr {
+    opacity: 1;
+}
+
+@media (max-width: 580px) {
+    .modal-content{
+        height: 45rem;
+        width: 55rem;
+    }
+}
+

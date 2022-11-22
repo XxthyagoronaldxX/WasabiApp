@@ -1,0 +1,55 @@
+.item-pedido {
+    width: 100%;
+
+    display: block;
+    padding: 2rem 0.6rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow-y: hidden;
+
+    border-radius: 0.5rem;
+
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.07);
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+#item-content {
+    width: 100%;
+}
+
+.item-pedido:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    color: black;
+    box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
+}
+
+.item-pedido-content {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-pedido-leading {
+    display: flex;
+
+    align-items: center;
+}
+
+.item-pedido-total {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.item-pedido-created-at {
+    color: gray;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-right: 3rem;
+}

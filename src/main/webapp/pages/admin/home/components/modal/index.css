@@ -1,0 +1,64 @@
+.modal-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content{
+    background: white;
+    width: 45rem;
+
+    padding: 2.5rem;
+    border: none;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#modal-title {
+    font-weight: bold;
+}
+
+#modal-form {
+    width: 100%;
+}
+
+.input-content {
+    width: 100%;
+}
+
+.input-content + .input-content {
+    margin-top: 1rem;
+}
+
+.input-content label {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-content input {
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+.input-content select {
+    width: 100%;
+    max-width: initial;
+}
+
+.modal-buttons {
+    width: 100%;
+    display: flex;
+
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+
+
+

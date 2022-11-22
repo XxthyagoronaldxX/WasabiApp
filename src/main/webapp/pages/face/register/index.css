@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Jungeregular';
+    src: url('../../../fonts/Junge-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: "Jungeregular", serif;
+    scrollbar-width: thin;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100VW;
+    height: calc(var(--vh, 1vh) * 100);
+
+    padding: 0;
+    margin: 0;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    overflow:hidden;
+}
+
+.register-frame {
+    height: 100%;
+    width: 60%;
+    max-width: 40rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    background-color: white;
+    overflow-y: auto;
+
+    transition: width 0.5s ease-out;
+}
+
+#logo_content {
+    width: 100%;
+    height: 7rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(182,0,0,1) 22%, rgba(133,0,0,1) 100%);
+}
+
+#register_form {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.8rem;
+    margin-block-end: 0;
+}
+
+.form-inputs {
+    width: 100%;
+
+    border-radius: 1rem;
+}
+
+.input-label {
+    font-weight: bold;
+
+    color: black;
+}
+
+.input-content {
+    width: 100%;
+}
+
+.bg-content {
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../../../imgs/bg_login_page.jpg");
+    background-size: cover;
+    filter: blur(2px);
+
+    position: absolute;
+    z-index: -1;
+}
+
+.double-input-group {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.double-input-group .input-content + .input-content {
+    margin-left: 0.5rem;
+}
+
+.buttons {
+    width: 100%;
+    height: 4rem;
+    flex-wrap: nowrap;
+
+    display: flex;
+    padding: 1rem;
+
+    justify-content: space-between;
+}
+
+.buttons a, .buttons button{
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+@media (max-width: 630px) {
+    .register-frame {
+        width: 80%;
+    }
+}
+
+@media (max-width: 520px) {
+    .double-input-group {
+        flex-direction: column;
+    }
+
+    .double-input-group .input-content + .input-content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .register-frame {
+        width: 100%;
+    }
+}

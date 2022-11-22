@@ -1,0 +1,49 @@
+.categoria-item {
+    height: 100%;
+    display: flex;
+    min-width: 14rem;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #EDE6E3;
+    border: black 1px solid;
+
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    transition: all 0.5s ease-out;
+}
+
+.categoria-item:hover {
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+
+    background-color: #B3D9E3;
+}
+
+.categoria-item img {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    transition: width 0.5s, height 0.5s;
+}
+
+.categoria-item:hover img {
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+
+.categoria-item + .categoria-item {
+    margin-left: 1rem;
+}
+
+.categoria-item p {
+    align-self: center;
+    overflow-x: hidden;
+    white-space: nowrap;
+
+    font-weight: bold;
+    font-size: 1.8rem;
+}

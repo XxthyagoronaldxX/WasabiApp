@@ -1,0 +1,27 @@
+#list {
+    width: 100%;
+    flex: 1;
+
+    overflow-y: auto;
+    display: block;
+}
+
+#list ul {
+    list-style: none;
+    display: block;
+}
+
+.item-fadein {
+    opacity: 1;
+
+    animation: item-fadein-animation 1.5s alternate;
+}
+
+@keyframes item-fadein-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

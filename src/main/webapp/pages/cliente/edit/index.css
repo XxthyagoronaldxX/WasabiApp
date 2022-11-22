@@ -1,0 +1,180 @@
+*::-webkit-scrollbar {
+    height: 2px;
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #CE1414;
+
+    border: 3px solid rgba(0, 0, 0, 0.3);
+}
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100VW;
+    overflow: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-frame {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    background-color: white;
+
+    overflow-y: auto;
+}
+
+.bg-content {
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../../../imgs/bg_login_page.jpg");
+    background-size: cover;
+    filter: blur(2px);
+
+    position: absolute;
+    z-index: -1;
+}
+
+#logo_content {
+    width: 100%;
+    height: 20%;
+    max-height: 10rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(182,0,0,1) 22%, rgba(133,0,0,1) 100%);
+}
+
+#logo_content h3 {
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+#logo_content img {
+    width: 8rem;
+    height: 8rem;
+}
+
+#edit_form {
+    width: 100%;
+    height: 80%;
+
+    overflow-y: auto;
+    padding: 0.8rem;
+    margin-block-end: 0;
+}
+
+.form-inputs {
+    width: 100%;
+
+    border-radius: 1rem;
+}
+
+.input-content {
+    width: 100%;
+}
+
+.input-content label {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.input-content input {
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+.select-alterar {
+    height: 3rem;
+    font-size: 1.6rem;
+}
+
+.buttons {
+    width: 100%;
+    height: 4rem;
+
+    padding: 0 1rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.buttons a {
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.6rem;
+    color: white;
+}
+
+.buttons button {
+    width: 9rem;
+    font-size: 1.6rem;
+}
+
+.btn-primary {
+    color: white;
+    border-color: #dc3545;
+    background-color: #dc3545;
+
+    width: 100%;
+}
+
+.btn-primary:hover {
+    color: white;
+    border-color: #dc3545;
+    background-color: #9c3545;
+}
+
+.btn-primary:focus {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc4445;
+    box-shadow: 0 0 0 0.25rem rgb(220 68 69 / 50%);
+}
+
+@media (max-width: 780px) {
+    .register-frame {
+        width: 75%;
+    }
+}
+
+@media (max-width: 500px) {
+    .register-frame {
+        width: 100%;
+    }
+    html {
+        font-size: 60%;
+    }
+}

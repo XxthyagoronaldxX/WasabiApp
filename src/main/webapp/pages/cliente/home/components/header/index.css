@@ -1,0 +1,114 @@
+.navbar-content {
+    width: 100%;
+    height: 8rem;
+    background: rgb(2,0,36);
+    background: linear-gradient(30deg, rgba(182,0,0,1) 22%, rgba(133,0,0,1) 100%);
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom-right-radius: 0.28rem;
+    border-bottom-left-radius: 0.28rem;
+
+    font-weight: bold;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+.icon-img {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.profile-content {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.profile-content .navbar-cliente-info {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.navbar-icon-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.navbar-icon-logo p {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.cart-content {
+    width: 40%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: end;
+}
+
+.cart-content a {
+    min-width: 5rem;
+    max-width: 6rem;
+    margin-right: 1rem;
+}
+
+.count-cart {
+    width: 2rem;
+    height: 1.4rem;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    top: 0.5rem;
+    right: 0.4rem;
+}
+
+.cliente-nome-info {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.cliente-endereco-info {
+    color: rgb(255, 255, 255, 0.6);
+    font-size: 1.3rem;
+}
+
+#cart-counter {
+    height: 1.4rem;
+    width: 1.5rem;
+
+    font-size: 1.2rem;
+}
+
+.dropdown-menu {
+    font-size: 1.6rem !important;
+}
+
+@media (max-width: 680px) {
+    .navbar-cliente-info {
+        visibility: hidden;
+    }
+
+    .dropdown-menu {
+        font-size: 2.4rem !important;
+    }
+}

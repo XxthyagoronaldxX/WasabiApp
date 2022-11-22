@@ -1,0 +1,27 @@
+:root {
+    --vh: 0;
+}
+
+@font-face {
+    font-family: 'Jungeregular';
+    src: url('../fonts/Junge-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: "Jungeregular", serif;
+    scrollbar-width: thin;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.swal-adapter {
+    font-size: 1.6rem !important;
+}
+
+@media (max-width: 760px) {
+    .swal-adapter {
+        font-size: 2.8rem !important;
+    }
+}

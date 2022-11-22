@@ -1,0 +1,41 @@
+.filter {
+    margin: 1rem 0 2rem 0;
+    padding: 0  4rem;
+    max-height: 7VH;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.label-filter {
+    background-color: rgba(206, 20, 20, 0.8);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.select-filter {
+    font-size: 1.7rem;
+    font-weight: bold;
+    max-width: 15rem;
+}
+
+.select-filter option {
+    font-weight: bold;
+}
+
+.input-filter-flag {
+    display: none;
+}
+
+.input-filter {
+    max-width: 20rem;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.filter-container {
+    display: flex;
+}

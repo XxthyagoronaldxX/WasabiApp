@@ -1,0 +1,223 @@
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.cart-item-content {
+    height: 9rem;
+    padding: 0.8rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.cart-item-content:hover {
+    transform: translateY(-3px) translateX(-4px);
+    box-shadow: 2px 5px 14px 0 rgba(0, 0, 0, 0.5);
+    z-index: 4;
+}
+
+.list-start {
+    height: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: start;
+}
+
+.list-start .image-wrapper {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-start .image-wrapper img {
+    width: 6rem;
+    height: 6rem;
+}
+
+.list-start .product-info {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.list-start .product-info .title-price-content {
+    display: flex;
+    flex-grow: 1;
+
+    justify-content: space-between;
+}
+
+.list-start .product-info .title-price-content h5 {
+    font-weight: bold;
+    color: #4A5899;
+    font-size: 2rem;
+    flex-grow: 2;
+}
+
+.list-start .product-info .title-price-content span {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    flex-grow: 1;
+    max-width: 12rem;
+
+    padding: 0.2rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-start .product-info .descricao-quantidade-content {
+    display: flex;
+    flex-grow: 1;
+
+    justify-content: space-between;
+}
+
+.list-start .product-info .descricao-quantidade-content h6 {
+    color: #565e64;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.list-start .product-info .descricao-quantidade-content h6:first-child {
+    margin-bottom: 0;
+    text-align: start;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-basis: fit-content;
+    flex-grow: 2;
+}
+
+.list-start .product-info .descricao-quantidade-content h6:last-child {
+    text-align: center;
+    max-width: 12rem;
+    min-width: 12rem;
+
+    flex-grow: 1;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.list-end {
+    flex-grow: 1;
+    display: flex;
+
+    align-items: center;
+    justify-content: end;
+}
+
+.list-end .quantidade-contador {
+    display: flex;
+    height: 4rem;
+    width: 12rem;
+
+    justify-content: space-evenly;
+    border: rgba(1, 1, 1, 0.2) 1px solid;
+}
+
+.list-end a {
+    height: 100%;
+    width: 4rem;
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bolder;
+
+    font-size: 2rem;
+}
+
+.list-end a:hover {
+    font-size: 2.2rem;
+}
+
+.list-end .quantidade-contador #quantidadeInput {
+    height: 100%;
+
+    text-align: center;
+    font-size: 1.6rem;
+
+    max-width: 4rem;
+    width: 2rem;
+}
+
+.list-end img {
+    margin-left: 0.4rem;
+    cursor: pointer;
+    border-radius: 25rem;
+    width: 36px;
+    height: 36px;
+
+    transition: background-color 1s;
+}
+
+.list-end img:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 620px) {
+    .cart-item-content {
+        height: 13rem;
+    }
+    .list-start img {
+        height: 9rem;
+        width: 9rem;
+    }
+    .list-start .product-info .title-price-content h5 {
+        font-size: 2.6rem;
+    }
+
+    .list-start .product-info .title-price-content span {
+        font-size: 2.2rem;
+    }
+
+    .list-start .product-info h6 {
+        font-size: 2rem;
+    }
+    .list-end {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-item-content {
+        height: 11rem;
+    }
+    .list-start .image-wrapper img {
+        height: 8rem;
+        width: 8rem;
+    }
+    .list-start .product-info .title-price-content h5 {
+        font-size: 2.4rem;
+    }
+
+    .list-start .product-info .title-price-content span {
+        font-size: 1.9rem;
+    }
+
+    .list-start .product-info h6 {
+        font-size: 2.2rem;
+    }
+    .list-end {
+        display: none;
+    }
+}
